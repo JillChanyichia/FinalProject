@@ -1,0 +1,186 @@
+body {
+    
+    margin: 0;
+}
+
+.transition{
+    transition: all .7s;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    /*background-image: url(../imgs/theme/bg_designer_home.jpg);*/
+    position: relative;
+}
+.logo{
+    width: 88px;
+    height: 120px;
+    margin-top: 80px;
+    margin-left: 180px;
+    /*background: url(../imgs/theme/icon.png) no-repeat center center;*/
+    background-size: cover;
+    position: absolute;
+}
+.white-area{
+    width: 84%;
+    height: 68vh;
+    margin-top: 27vh;
+    margin-left: 8%;
+    background: #fff; 
+   /* background: steelblue; */
+    position: absolute;
+    overflow: hidden;
+}
+/*.nav-bar{*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*background-color: gray;*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*z-index: 999;*/
+/*}*/
+.container {
+
+    width: 50%;
+    height: 68vh;
+    /*background-color: #0f0;*/
+    position: absolute;
+    
+}
+.container-left {
+    /*background-color: #0f0;*/
+    margin-top: -183vh;
+   
+}
+.container-right {
+    margin-left: 50%;
+   /* background-color: #00f;*/
+   }
+
+.slider-left, .slider-right{
+    width: 54%;
+    height: 54vh;
+    /*border:1px dashed black;*/
+    background-color: red;
+    position: relative;
+    margin-top: 7vh;
+
+
+}
+.slider-left{
+    margin-left: 46%;
+}
+.slider-right1{
+    background: url(../imgs/theme/bn_designer_01_right.jpg) no-repeat center center;
+    }
+.slider-right2{
+    background: url(../imgs/theme/bn_designer_02_right.jpg) no-repeat center center;
+    }    
+.slider-right3{
+    background: url(../imgs/theme/bn_designer_03_right.jpg) no-repeat center center;
+    }
+.slider-right4{
+    background: url(../imgs/theme/bn_designer_04_right.jpg) no-repeat center center;
+    }
+.slider-left1{
+    background: url(../imgs/theme/bn_designer_01_left.jpg) no-repeat center center;
+    }
+.slider-left2{
+    background: url(../imgs/theme/bn_designer_02_left.jpg) no-repeat center center;
+    }
+.slider-left3{
+    background: url(../imgs/theme/bn_designer_03_left.jpg) no-repeat center center;
+    }
+.slider-left4{
+    background: url(../imgs/theme/bn_designer_04_left.jpg) no-repeat center center;
+    }
+.slider-img{
+    background-size: cover;
+    cursor: pointer;
+}
+.bar{
+    width: 40px;
+    height: 46px;
+    /*background: black;*/
+    position: absolute;
+    margin-top: 20%;
+}
+.bar-left{
+    
+    margin-left: 18%;
+}
+.bar-right{
+    
+    margin-left: 79%;
+}
+li{
+    display: block;
+}
+
+.bar-switch{
+    background: #666;
+    opacity: 0.4;
+    width: 40px;
+    height: 4px;
+}
+.active-bar-switch{
+    background: #666;
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 0.8s;
+} 
+.switch-02, .switch-03, .switch-04 {
+    margin-top: 10px;
+}
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    background-image: url(../imgs/theme/mouse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transform: translateX(-50%) scale(1);
+    transition: transform 0.3s 0s;
+}
+.scroll-text{
+    font-size: 20px;
+    color: #666;
+    top:10px;
+    /*bottom: 10px;*/
+    margin-bottom: 0;
+}
+.scroll:hover {
+    /*transform: translateX(-50%) scale(1.2);*/
+    animation: cd-translate 1.2s 0.8s;
+    animation-iteration-count: infinite;
+}
+@keyframes cd-translate {
+    0% {
+        -webkit-transform: translateX(-50%) scale(1);
+        -moz-transform: translateX(-50%) scale(1);
+        -ms-transform: translateX(-50%) scale(1);
+        -o-transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        -webkit-transform: translateY(5px) translateX(-50%) scale(1);
+        -moz-transform: translateY(5px) translateX(-50%) scale(1);
+        -ms-transform: translateY(5px) translateX(-50%) scale(1);
+        -o-transform: translateY(5px) translateX(-50%) scale(1);
+        transform: translateY(5px) translateX(-50%) scale(1);
+    }
+    100% {
+        -webkit-transform: translateX(-50%) scale(1);
+        -moz-transform: translateX(-50%) scale(1);
+        -ms-transform: translateX(-50%) scale(1);
+        -o-transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1);
+    }
+}
