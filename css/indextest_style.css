@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid #ccc;*/
+	position: relative;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+/*	text-align: center;
+*/}
+.chanlogo img{
+	/*height: 300px;*/
+	/*border: 1px solid #ccc;*/
+	width: 100%;
+}
+.chanlogo{
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 200px;
+}
+.shop{
+	width: 300px;
+	padding-top: 15px;
+	font-size: 16px;
+	top: 190px;
+	position: absolute;
+	text-align: center;
+	transition: all 1s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.collections{
+	width: 300px;
+	padding-top: 15px;
+	font-size: 16px;
+	top: 220px;
+	position: absolute;
+	text-align: center;
+	transition: all 1s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.about{
+	width: 300px;
+	padding-top: 15px;
+	font-size: 16px;
+	top: 250px;
+	position: absolute;
+	text-align: center;
+	transition: all 1s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.about a, .collections a, .shop a{
+	color: #000;
+	text-decoration: none;
+	transition-duration: 1.5s;
+}
+.about a:hover, .collections a:hover, .shop a:hover{
+	color: red;
+}
+.timer{
+	font-size: 14px;
+	padding-left: 33px;
+	position: absolute;
+	top: 75px;
+	width: 300px;
+}
+.location{
+	position: absolute;
+	top: 73px;
+	left: 185px;
+	padding-left: 25px;
+}
+.instagram{
+	position: absolute;
+	top: 300px;
+	/*top: 40px;*/
+	width: 300px;
+	text-align: center;
+	margin-top: 10px;
+}
+.instagram a{
+	color: red;
+	padding-left: 0px;
+}
+/*.updog-stamp{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}*/

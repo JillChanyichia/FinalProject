@@ -1,0 +1,150 @@
+/*nav*/
+nav{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+nav .logo{
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-left: 100px;
+    transition: .5s;
+    letter-spacing: 0.15em;
+}
+
+nav ul a{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    /*color: red;*/
+    transition-duration: .8s;
+   	font-size: 15px;
+
+}
+
+.my_navbar{
+    height:70px;
+    z-index: 1;
+    background: rgba(255, 255, 255, .9);
+    width:100%;
+    z-index: 10000;
+       	/*cursor: pointer;*/
+
+}
+
+.my_navbar ul{
+    justify-content: flex-end;
+    width:100%;
+   	top: -5px;
+
+}
+
+.my_navbar ul li:hover{
+	margin-top: -4px;
+}
+
+.my_navbar ul li{
+    margin-left:25px;
+    margin-right:25px;
+    margin-top: 0px;
+    transition-duration: .5s;
+}
+
+.my_navbar ul li.last{
+    margin-right:100px;
+}
+
+.navbar-collapse{
+  background-color: rgba(255, 255, 255, .9);
+}
+
+/*footer*/
+footer h6{
+	text-align: center;
+ 	color: #999;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	font-weight: 400;
+ 	font-size: 13px;
+ 	padding-top: 50px;
+ 	padding-bottom: 10px;
+ 	height: 80px;
+}
+
+/*banner*/
+.banner {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: .8em;
+  font-weight: 400;
+  z-index: 1;
+  width: 200px;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #fff;
+  background: #008b8b;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner:before,
+.banner:after {
+  z-index: -1;
+  content: "";
+  display: block;
+  top: 5px;
+  position: absolute;
+  border-top: 15px solid #007172;
+  border-bottom: 15px solid #007172;
+}
+.banner:before {
+  right: 100%;
+  margin-right: 0;
+  border-right: 15px solid #007172;
+  border-left: 5px solid transparent;
+}
+.banner:after {
+  left: 100%;
+  margin-left: 0;
+  border-left: 15px solid #007172;
+  border-right: 5px solid transparent;
+}
+
+/*button*/
+
+.button{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .9em;
+    letter-spacing: 1.2px;
+    transition-duration: .7s;
+    text-align: center;
+}
+
+.button:hover{
+    text-decoration: none;
+}
+
+
+/*RWD*/
+/*phone*/
+@media (max-width: 767px){
+  nav .logo{
+     margin-left: 130px;
+  }
+
+  nav button{
+    margin-right: 8px;
+  }
+}
+
+/* #Mobile (Landscape) - XS */
+@media only screen 
+    and (height : 375px) 
+    and (width : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+    nav button{
+      margin-right: 8px;
+    }
+}

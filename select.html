@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/thememain.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Anaheim|Carrois+Gothic|Fira+Sans|Noto+Sans|PT+Sans+Narrow|Pontano+Sans|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/icon_font.css">
+    <!-- <link rel="stylesheet" href="css/Header_Footer.css"> -->
+    <link rel="stylesheet" href="css/allInclude.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&display=swap" rel="stylesheet">
+    <script src="js/Header.js"></script>
+    <!-- <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.2/release/featherlight.min.css" type="text/css" rel="stylesheet" /> -->
+    <!-- <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.2/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script> -->
+</head>
+<body>
+    <!-- <script src="./js/nav.js"></script> -->
+    <div class="wrap">
+<!--        <nav class="nav-bar">nav bar</nav>-->
+        <div class="logo"><a href="index.html"><img src="imgs/logo.png" href="index.html"></a></div>
+        <section class="white-area">
+
+            <ul class="bar bar-left">
+                <li class="active-bar-switch"></li>
+                <li class="bar-switch switch-01 bar-left-01"></li>
+                <li class="bar-switch switch-02 bar-left-02"></li>
+                <li class="bar-switch switch-03 bar-left-03"></li>
+                <li class="bar-switch switch-04 bar-left-04"></li>
+            </ul>
+            <ul class="bar bar-right">
+                <li class="active-bar-switch"></li>
+                <li class="bar-switch switch-01 bar-right-01"></li>
+                <li class="bar-switch switch-02 bar-right-02"></li>
+                <li class="bar-switch switch-03 bar-right-03"></li>
+                <li class="bar-switch switch-04 bar-right-04"></li>
+            </ul>
+            <div class="container container-left transition" style="padding: 0">
+                <div class="slider-img slider-left slider-left4"></div>
+                <div class="slider-img slider-left slider-left3"></div>
+                <div class="slider-img slider-left slider-left2"></div>
+                <div class="slider-img slider-left slider-left1"></div>
+            </div><!-- container-left -->
+            <div class="container container-right transition" style="padding: 0">
+                <div class="slider-img slider-right slider-right1"></div>
+                <div class="slider-img slider-right slider-right2"></div>
+                <div class="slider-img slider-right slider-right3"></div>
+                <div class="slider-img slider-right slider-right4"></div>
+            </div><!-- container-right -->
+            <div class="scroll"><p class="scroll-text">scroll</p></div>
+        </section>
+        
+    </div>
+    <script>
+    $(function() {
+        var oTime = null;
+        var bOnce = true;
+        var activeItem = 1;
+        var totalItem = 4;
+       
+        // 這裡可以判斷wheel上下
+        $(document).on('mousewheel', function(event) {
+            //WebKit内核，Trident内核 => mousewheel
+            event.preventDefault();
+            var value = event.originalEvent.wheelDelta;
+            //e.originalEvent.wheelDelta => 120(up) or -120(down) 谷歌IE内核
+            var delta = Math.max(-1, Math.min(1, value));
+            console.log(delta < 0 ? 'down' : 'up');
+            //判斷時間內的觸發
+            if (bOnce) {
+                //down first
+                if (delta < 0 & activeItem<totalItem) {
+                    var h = window.innerHeight;
+                    $(".container-left").css("margin-top", "+=" + h * 0.61);
+                    $(".container-right").css("margin-top", "-=" + h * 0.61);
+                    $(".active-bar-switch").css("top", "+=" + "14px");
+                    activeItem += 1;
+                   
+                } else if(delta >= 0 & activeItem>1) {
+                    var h = window.innerHeight;
+                    $(".container-left").css("margin-top", "-=" + h * 0.61);
+                    $(".container-right").css("margin-top", "+=" + h * 0.61);
+                    $(".active-bar-switch").css("top", "-=" + "14px");
+                    activeItem -= 1;
+                }
+                bOnce = false;
+                clearInterval(oTime);
+                oTime = setTimeout(function() {
+                    bOnce = true
+                }, 800);
+            }
+        });
+        // 這裡可以判斷wheel上下
+        $('.slider-right1, .slider-left1').click(function(){
+//            alert('clicked1');
+            window.location.href="shop.html";
+        });
+        $('.slider-right2, .slider-left2').click(function(){
+//            alert('clicked2');
+            window.location.href="shop.html";
+        });
+    });
+    </script>
+<!-- <script src="./js/footer.js"></script> -->
+</body>
+</html>
